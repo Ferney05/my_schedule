@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&family=Sigmar&display=swap');
+
+:root {
+    --color-nav: #171f26;
+    --color-blue-claro: #14a1f0;
+    --color-blue: #087ec4;
+    --color-white: #f1f2e6;
+    --color-black: #201e1e;
+    --color-green: #35b34a;
+
+
+    --font-montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+    font-family: var(--font-montserrat);
+    margin: 0;
+    padding: 0;
+}
