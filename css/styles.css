@@ -1,11 +1,22 @@
 
+@import url('fuentes-colors.css');
 @import url('main.css');
 
 .flex {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .3rem;
     align-items: center;
     justify-content: center;
+}
+
+.date_text {
+    font-size: .9rem;
+    color: var(--color-white);
+}
+
+.title_info {
+    font-size: 2rem;
+    color: var(--color-blue);
 }
