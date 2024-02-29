@@ -65,22 +65,16 @@ function MarkTable(one, two, three, four, five, six, seven) {
 
     if (currentHour === 6 && currentMinute >= 0 && currentMinute <= 59) {
         one.style = 'background-color: #35b34a'
-        window.location.reload()
     } else if (currentHour === 7 && currentMinute >= 0 && currentMinute <= 59){
         two.style = 'background-color: #35b34a'
-        window.location.reload()
     } else if (currentHour === 8 && currentMinute >= 30 && currentMinute <= 59){
         three.style = 'background-color: #35b34a'
-        window.location.reload()
     } else if (currentHour === 17 && currentMinute >= 0 && currentMinute <= 30){
         four.style = 'background-color: #35b34a'
-        window.location.reload()
-    } else if (currentHour === 19 && currentMinute >= 0 && currentMinute <= 59){
+    } else if (currentHour === 15 && currentMinute >= 0 && currentMinute <= 59){
         five.style = 'background-color: #35b34a'
-        window.location.reload()
     } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 59){
         six.style = 'background-color: #35b34a'
-        window.location.reload()
     } else if (currentHour === 21 && currentMinute >= 0 && currentMinute <= 59){
         seven.style = 'background-color: #35b34a'
         window.location.reload()
