@@ -34,51 +34,28 @@ const _4jueves = document.querySelector('.current_activity4jueves')
 const _4viernes = document.querySelector('.current_activity4viernes')
 const _4sabado = document.querySelector('.current_activity4sabado')
 
-const _5lunes = document.querySelector('.current_activity5lunes')
-const _5martes = document.querySelector('.current_activity5martes')
-const _5miercoles = document.querySelector('.current_activity5miercoles')
-const _5jueves = document.querySelector('.current_activity5jueves')
-const _5viernes = document.querySelector('.current_activity5viernes')
-const _5sabado = document.querySelector('.current_activity5sabado')
-
-const _6lunes = document.querySelector('.current_activity6lunes')
-const _6martes = document.querySelector('.current_activity6martes')
-const _6miercoles = document.querySelector('.current_activity6miercoles')
-const _6jueves = document.querySelector('.current_activity6jueves')
-const _6viernes = document.querySelector('.current_activity6viernes')
-const _6sabado = document.querySelector('.current_activity6sabado')
-
-const _7lunes = document.querySelector('.current_activity7lunes')
-const _7martes = document.querySelector('.current_activity7martes')
-const _7miercoles = document.querySelector('.current_activity7miercoles')
-const _7jueves = document.querySelector('.current_activity7jueves')
-const _7viernes = document.querySelector('.current_activity7viernes')
-const _7sabado = document.querySelector('.current_activity7sabado')
-
 const date_current = document.getElementById('date_current')
 
 
-function MarkTable(one, two, three, four, five, six, seven) {
+function MarkTable(one, two, three, four) {
     const hour = new Date();
     const currentHour = hour.getHours();
     const currentMinute = hour.getMinutes();
 
     if (currentHour === 6 && currentMinute >= 0 && currentMinute <= 59) {
-        one.style = 'background-color: #35b34a'
-    } else if (currentHour === 7 && currentMinute >= 0 && currentMinute <= 59){
-        two.style = 'background-color: #35b34a'
-    } else if (currentHour === 8 && currentMinute >= 30 && currentMinute <= 59){
-        three.style = 'background-color: #35b34a'
-    } else if (currentHour === 17 && currentMinute >= 0 && currentMinute <= 30){
-        four.style = 'background-color: #35b34a'
-    } else if (currentHour === 15 && currentMinute >= 0 && currentMinute <= 59){
-        five.style = 'background-color: #35b34a'
-    } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 59){
-        six.style = 'background-color: #35b34a'
-    } else if (currentHour === 21 && currentMinute >= 0 && currentMinute <= 59){
-        seven.style = 'background-color: #35b34a'
-        window.location.reload()
+        one.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 7 && currentMinute >= 0 && currentMinute <= 59) {
+        two.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute <= 59) {
+        three.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 19 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 21 && currentMinute >= 0 && currentMinute <= 30) {
+        four.style.backgroundColor = '#35b34a';
     }
+    
 }
 
 function CallFunctions(){
@@ -86,17 +63,17 @@ function CallFunctions(){
     const day_current = new Date()
 
     if (days[day_current.getDay()] === 'Lunes'){
-        MarkTable(_1lunes, _2lunes, _3lunes, _4lunes, _5lunes, _6lunes, _7lunes)
+        MarkTable(_1lunes, _2lunes, _3lunes, _4lunes)
     } else if (days[day_current.getDay()] === 'Martes'){
-        MarkTable(_1martes, _2martes, _3martes, _4martes, _5martes, _6martes, _7martes)
+        MarkTable(_1martes, _2martes, _3martes, _4martes)
     } else if (days[day_current.getDay()] === 'Miercoles'){
-        MarkTable(_1miercoles, _2miercoles, _3miercoles, _4miercoles, _5miercoles, _6miercoles, _7miercoles)
+        MarkTable(_1miercoles, _2miercoles, _3miercoles, _4miercoles)
     } else if (days[day_current.getDay()] === 'Jueves'){
-        MarkTable(_1jueves, _2jueves, _3jueves, _4jueves, _5jueves, _6jueves, _7jueves)
+        MarkTable(_1jueves, _2jueves, _3jueves, _4jueves)
     } else if (days[day_current.getDay()] === 'Viernes'){
-        MarkTable(_1viernes, _2viernes, _3viernes, _4viernes, _5viernes, _6viernes, _7viernes)
+        MarkTable(_1viernes, _2viernes, _3viernes, _4viernes)
     } else if (days[day_current.getDay()] === 'Sabado'){
-        MarkTable(_1sabado, _2sabado, _3sabado, _4sabado, _5sabado, _6sabado, _7sabado)
+        MarkTable(_1sabado, _2sabado, _3sabado, _4sabado)
     }
 }
 
