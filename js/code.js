@@ -34,10 +34,17 @@ const _4jueves = document.querySelector('.current_activity4jueves')
 const _4viernes = document.querySelector('.current_activity4viernes')
 const _4sabado = document.querySelector('.current_activity4sabado')
 
+const _5lunes = document.querySelector('.current_activity5lunes')
+const _5martes = document.querySelector('.current_activity5martes')
+const _5miercoles = document.querySelector('.current_activity5miercoles')
+const _5jueves = document.querySelector('.current_activity5jueves')
+const _5viernes = document.querySelector('.current_activity5viernes')
+const _5sabado = document.querySelector('.current_activity5sabado')
+
 const date_current = document.getElementById('date_current')
 
 
-function MarkTable(one, two, three, four) {
+function MarkTable(one, two, three, four, five) {
     const hour = new Date();
     const currentHour = hour.getHours();
     const currentMinute = hour.getMinutes();
@@ -48,14 +55,26 @@ function MarkTable(one, two, three, four) {
         two.style.backgroundColor = '#35b34a';
     } else if (currentHour === 8 && currentMinute >= 0 && currentMinute <= 59) {
         three.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 9 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 10 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 11 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 12 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 13 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 14 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
     } else if (currentHour === 19 && currentMinute >= 0 && currentMinute <= 59) {
-        four.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 59) {
-        four.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 21 && currentMinute >= 0 && currentMinute <= 30) {
-        four.style.backgroundColor = '#35b34a';
+        five.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute <= 30) {
+        five.style.backgroundColor = '#35b34a';
+        one.style = 'cursor: pointer';
+    } else {
+
     }
-    
 }
 
 function CallFunctions(){
@@ -63,17 +82,17 @@ function CallFunctions(){
     const day_current = new Date()
 
     if (days[day_current.getDay()] === 'Lunes'){
-        MarkTable(_1lunes, _2lunes, _3lunes, _4lunes)
+        MarkTable(_1lunes, _2lunes, _3lunes, _4lunes, _5lunes)
     } else if (days[day_current.getDay()] === 'Martes'){
-        MarkTable(_1martes, _2martes, _3martes, _4martes)
+        MarkTable(_1martes, _2martes, _3martes, _4martes, _5martes)
     } else if (days[day_current.getDay()] === 'Miercoles'){
-        MarkTable(_1miercoles, _2miercoles, _3miercoles, _4miercoles)
+        MarkTable(_1miercoles, _2miercoles, _3miercoles, _4miercoles, _5miercoles)
     } else if (days[day_current.getDay()] === 'Jueves'){
-        MarkTable(_1jueves, _2jueves, _3jueves, _4jueves)
+        MarkTable(_1jueves, _2jueves, _3jueves, _4jueves, _5jueves)
     } else if (days[day_current.getDay()] === 'Viernes'){
-        MarkTable(_1viernes, _2viernes, _3viernes, _4viernes)
+        MarkTable(_1viernes, _2viernes, _3viernes, _4viernes, _5viernes)
     } else if (days[day_current.getDay()] === 'Sabado'){
-        MarkTable(_1sabado, _2sabado, _3sabado, _4sabado)
+        MarkTable(_1sabado, _2sabado, _3sabado, _4sabado, _5sabado)
     }
 }
 
@@ -134,3 +153,93 @@ ShowDayCurrent()
 CallFunctions()
 
 
+// Mostrar temas
+
+// PYTHON
+
+const sh_temas_py = document.querySelector('.sh_temas_py')
+const close_py = document.querySelector('.close_py')
+
+function ShowHiddenTemasPython(show){
+    show.addEventListener('click', () => {
+        sh_temas_py.style = 'display: block'
+    })
+
+    close_py.addEventListener('click', () => {
+        sh_temas_py.style = 'display: none'
+    })
+}
+
+ShowHiddenTemasPython(_1lunes)
+ShowHiddenTemasPython(_1viernes)
+ShowHiddenTemasPython(_2martes)
+ShowHiddenTemasPython(_2jueves)
+ShowHiddenTemasPython(_5miercoles)
+ShowHiddenTemasPython(_5sabado)
+
+
+// ------------- JAVASCRIPT ----------
+
+const sh_temas_js = document.querySelector('.sh_temas_js')
+const close_js = document.querySelector('.close_js')
+
+function ShowHiddenTemasJs(show){
+    show.addEventListener('click', () => {
+        sh_temas_js.style = 'display: block'
+    })
+
+    close_js.addEventListener('click', () => {
+        sh_temas_js.style = 'display: none'
+    })
+}
+
+ShowHiddenTemasJs(_1martes)
+ShowHiddenTemasJs(_1sabado)
+ShowHiddenTemasJs(_2lunes)
+ShowHiddenTemasJs(_3miercoles)
+ShowHiddenTemasJs(_5jueves)
+ShowHiddenTemasJs(_5viernes)
+
+// ------------- GIT ----------
+
+const sh_temas_git = document.querySelector('.sh_temas_git')
+const close_git = document.querySelector('.close_git')
+
+function ShowHiddenTemasGit(show){
+    show.addEventListener('click', () => {
+        sh_temas_git.style = 'display: block'
+    })
+
+    close_git.addEventListener('click', () => {
+        sh_temas_git.style = 'display: none'
+    })
+}
+
+ShowHiddenTemasGit(_1jueves)
+ShowHiddenTemasGit(_2miercoles)
+ShowHiddenTemasGit(_2sabado)
+ShowHiddenTemasGit(_3martes)
+ShowHiddenTemasGit(_3viernes)
+ShowHiddenTemasGit(_5lunes)
+
+// ------------- SQL ----------
+
+const sh_temas_sql = document.querySelector('.sh_temas_sql')
+const close_sql = document.querySelector('.close_sql')
+
+function ShowHiddenTemasSQL(show){
+    show.addEventListener('click', () => {
+        sh_temas_sql.style = 'display: block'
+    })
+
+    close_sql.addEventListener('click', () => {
+        sh_temas_sql.style = 'display: none'
+    })
+}
+
+ShowHiddenTemasSQL(_1miercoles)
+ShowHiddenTemasSQL(_2viernes)
+ShowHiddenTemasSQL(_3lunes)
+ShowHiddenTemasSQL(_3jueves)
+ShowHiddenTemasSQL(_3sabado)
+ShowHiddenTemasSQL(_5martes)
