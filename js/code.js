@@ -27,12 +27,12 @@ const _3jueves = document.querySelector('.current_activity3jueves')
 const _3viernes = document.querySelector('.current_activity3viernes')
 const _3sabado = document.querySelector('.current_activity3sabado')
 
-const _4lunes = document.querySelector('.current_activity4lunes')
-const _4martes = document.querySelector('.current_activity4martes')
-const _4miercoles = document.querySelector('.current_activity4miercoles')
-const _4jueves = document.querySelector('.current_activity4jueves')
-const _4viernes = document.querySelector('.current_activity4viernes')
-const _4sabado = document.querySelector('.current_activity4sabado')
+const laborar_lunes = document.querySelector('.laborar')
+const laborar_martes = document.querySelector('.laborar')
+const laborar_miercoles = document.querySelector('.laborar')
+const laborar_jueves = document.querySelector('.laborar')
+const laborar_viernes = document.querySelector('.laborar')
+const laborar_sabado = document.querySelector('.laborar')
 
 const _5lunes = document.querySelector('.current_activity5lunes')
 const _5martes = document.querySelector('.current_activity5martes')
@@ -53,8 +53,8 @@ function MarkTable(one, two, three, four, five) {
         one.style.backgroundColor = '#35b34a';
     } else if (currentHour === 7 && currentMinute >= 0 && currentMinute <= 59) {
         two.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute >= 30) {
+        four.style.backgroundColor = '#35b34a';
     } else if (currentHour === 9 && currentMinute >= 0 && currentMinute <= 59) {
         four.style.backgroundColor = '#35b34a';
     } else if (currentHour === 10 && currentMinute >= 0 && currentMinute <= 59) {
@@ -68,13 +68,13 @@ function MarkTable(one, two, three, four, five) {
     } else if (currentHour === 14 && currentMinute >= 0 && currentMinute <= 59) {
         four.style.backgroundColor = '#35b34a';
     } else if (currentHour === 19 && currentMinute >= 0 && currentMinute <= 59) {
+        three.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 59) {
         five.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute <= 30) {
+    } else if (currentHour === 21 && currentMinute >= 0 && currentMinute <= 30) {
         five.style.backgroundColor = '#35b34a';
         one.style = 'cursor: pointer';
-    } else {
-
-    }
+    } 
 }
 
 function CallFunctions(){
@@ -82,17 +82,18 @@ function CallFunctions(){
     const day_current = new Date()
 
     if (days[day_current.getDay()] === 'Lunes'){
-        MarkTable(_1lunes, _2lunes, _3lunes, _4lunes, _5lunes)
+        MarkTable(_1lunes, _2lunes, _3lunes, laborar_lunes, _5lunes)
     } else if (days[day_current.getDay()] === 'Martes'){
-        MarkTable(_1martes, _2martes, _3martes, _4martes, _5martes)
+        MarkTable(_1martes, _2martes, _3martes, laborar_martes, _5martes)
     } else if (days[day_current.getDay()] === 'Miercoles'){
-        MarkTable(_1miercoles, _2miercoles, _3miercoles, _4miercoles, _5miercoles)
+        MarkTable(_1miercoles, _2miercoles, _3miercoles, laborar_miercoles, _5miercoles)
     } else if (days[day_current.getDay()] === 'Jueves'){
-        MarkTable(_1jueves, _2jueves, _3jueves, _4jueves, _5jueves)
+        MarkTable(_1jueves, _2jueves, _3jueves, laborar_jueves, _5jueves)
     } else if (days[day_current.getDay()] === 'Viernes'){
-        MarkTable(_1viernes, _2viernes, _3viernes, _4viernes, _5viernes)
+        MarkTable(_1viernes, _2viernes, _3viernes, laborar_viernes, _5viernes)
     } else if (days[day_current.getDay()] === 'Sabado'){
-        MarkTable(_1sabado, _2sabado, _3sabado, _4sabado, _5sabado)
+        MarkTable(_1sabado, _2sabado, _3sabado, laborar_sabado, _5sabado)
+        laborar_sabado.style = 'background-color: #b4b4b4;'
     }
 }
 

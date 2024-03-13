@@ -43,10 +43,6 @@ td {
     font-size: .9rem;
 }
 
-.cursor {
-    cursor: pointer;
-}
-
 .rest {
     background-color: var(--color-blue);
 }
@@ -57,7 +53,7 @@ td {
 
 /* PYTHON */
 
-.sh_temas_py, .sh_temas_js, .sh_temas_git, .sh_temas_sql {
+.sh_temas_py {
     height: 80vh;
     width: 80%;
     position: absolute;
@@ -65,7 +61,7 @@ td {
     background-color: var(--color-black);
 }
 
-.temas_python, .temas_javascript, .temas_git, .temas_sql {
+.temas_python {
     padding: 1rem 0;
 }
 
@@ -82,7 +78,7 @@ td {
     text-transform: uppercase;
 }
 
-.close_py, .close_js, .close_git, .close_sql {
+.close_py {
     font-size: 1rem;
     color: var(--color-red);
     border: 2px solid var(--color-red-claro);
@@ -92,21 +88,6 @@ td {
 }
 
 .close_py:hover {
-    background-color: var(--color-red);
-    color: var(--color-red-claro);
-}
-
-.close_js:hover {
-    background-color: var(--color-red);
-    color: var(--color-red-claro);
-}
-
-.close_git:hover {
-    background-color: var(--color-red);
-    color: var(--color-red-claro);
-}
-
-.close_sql:hover {
     background-color: var(--color-red);
     color: var(--color-red-claro);
 }
