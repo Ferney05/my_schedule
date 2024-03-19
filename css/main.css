@@ -134,3 +134,27 @@ td {
     font-weight: 300;
     font-size: .9rem;
 }
+
+/* LINKS */
+
+.show_links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.show_links a {
+    width: 130px;
+    font-size: .9rem;
+    padding: .5rem 0;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-black);
+    background-color: var(--color-gris);
+}
+
+.show_links a:hover {
+    background-color: var(--color-green);
+    color: var(--color-white);
+} 
