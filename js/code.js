@@ -71,10 +71,7 @@ function MarkTable(one, two, three, four, five) {
         three.style.backgroundColor = '#35b34a';
     } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 59) {
         five.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 21 && currentMinute >= 0 && currentMinute <= 30) {
-        five.style.backgroundColor = '#35b34a';
-        one.style = 'cursor: pointer';
-    } 
+    }
 }
 
 function CallFunctions(){
