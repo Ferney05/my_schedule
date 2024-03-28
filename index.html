@@ -10,14 +10,6 @@
 
     <main class="main">
         <section class="my_schedule">
-            <div class="show_links">
-                <a href="https://devdocs.io/python~3.12/tutorial/index" target="_blank" title="Aprende y domina Python">Python</a>
-                <a href="https://devdocs.io/javascript/" target="_blank" title="Aprende y domina JavaScript">JavaScript</a>
-                <a href="https://www.sololearn.com/es/" target="_blank" title="Aprende y domina SQL">SQL</a>
-                <a href="https://youtu.be/3GymExBkKjE?feature=shared" target="_blank" title="Aprende y domina Git">Git</a>
-                <a href="https://www.curso-ingles.com/" target="_blank" title="Aprende y domina el idioma Inglés">Inglés</a>
-            </div>
-
             <p class="remember_today" id="date_current"></p>
             <div class="table_my_schedule">
                 <table>
@@ -56,13 +48,7 @@
                     </tr>
         
                     <tr>
-                        <td class="rest"></td>
-                        <td class="lunes rest"></td>
-                        <td class="martes rest"></td>
-                        <td class="miercoles rest"></td>
-                        <td class="jueves rest"></td>
-                        <td class="viernes rest"></td>
-                        <td class="sabado rest"></td>
+                        <td colspan="7" class="lunes rest">Descanso</td>
                     </tr>
 
                     <tr>
@@ -88,103 +74,42 @@
                 </table>
             </div>
         </section>
-        
-        <section class="sh_temas_py">
-            <div class="temas_python">
-                <div class="title_close">
-                    <h1 class="title_roadmap">Ruta de Python</h1>
-                    <span class="close_py" title="Cerrar">✖︎</span>
+
+        <div class="card">
+                <div class="container">
+                    <p class="text_import">Python</p>
+                    <div class="show_links">
+                        <a href="https://www.w3schools.com/python/default.asp" target="_blank">Python</a>
+                        <a href="https://www.sololearn.com/es/learn/courses/python-developer" target="_blank">Desarrollador Python</a>
+                        <a href="https://www.sololearn.com/es/learn/courses/data-programming?location=2" target="_blank">Programación para datos</a>
+                        <a href="https://www.sololearn.com/es/learn/courses/coding-foundations" target="_blank">Bases de la programación</a>
+                    </div>
                 </div>
-        
-                <div class="flex_themes_all">
-                    <div class="flex_temas">
-                        <h2 class="title_level">Básicos</h2>
-                        <div class="themes_all">
-                            <ul>
-                                <li>Cadenas de caracteres</li>
-                                <li>Excepciones</li>
-                                <li>Funciones</li>
-                                <li>Listas</li>
-                                <li>Tuplas</li>
-                                <li>Conjuntos</li>
-                                <li>Diccionarios</li>
-                                <li>Módulos</li>
-                                <li>Fechas</li>
-                            </ul>
-                        </div>
+
+                <div class="container">
+                    <p class="text_import">SQL</p>
+                    <div class="show_links">
+                        <a href="https://www.sololearn.com/es/learn/courses/sql-introduction" target="_blank">Introducción a SQL</a>
+                        <a href="https://www.sololearn.com/es/learn/courses/sql-intermediate" target="_blank">SQL intermedio</a>
                     </div>
-        
-                    <div class="flex_temas">
-                        <h2 class="title_level">Avanzado</h2>
-                        <div class="themes_all">
-                            <ul>
-                                <li>Comprensiones de lista</li>
-                                <li>Expresiones generadoras</li>
-                                <li>Paradigmas</li>
-                                <li>Expresiones regulares</li>
-                                <li>Decoradores</li>
-                                <li>Iteradores</li>
-                                <li>Funciones Lambda</li>
-                                <li>JSON</li>
-                                <li>Manipulación de archivos</li>
-                            </ul>
-                        </div>
+                </div>
+
+                <div class="container">
+                    <p class="text_import">JavaScript</p>
+                    <div class="show_links">
+                        <a href="https://devdocs.io/javascript/" target="_blank">JavaScript</a>
+                        <a href="https://www.sololearn.com/es/learn/courses/angular" target="_blank">Angular</a>
                     </div>
-        
-                    <div class="flex_temas">
-                        <h2 class="title_level">DSA</h2>
-                        <div class="themes_all">
-                            <ul>
-                                <li>Arreglos y listas enlazadas</li>
-                                <li>Montículos, pilas, colas</li>
-                                <li>Tablas de hash</li>
-                                <li>Árboles de búsqueda binaria</li>
-                                <li>Recursión</li>
-                                <li>Algoritmos de ordenamiento</li>
-                            </ul>
-                        </div>
-                    </div>
-        
-                    <div class="flex_temas">
-                        <h2 class="title_level">poo</h2>
-                        <div class="themes_all">
-                            <ul>
-                                <li>Clases</li>
-                                <li>Herencia</li>
-                                <li>Métodos (incluyendo métodos especiales)</li>
-                            </ul>
-                        </div>
-                    </div>
-        
-                    <div class="flex_temas">
-                        <h2 class="title_level">Ciencia de datos</h2>
-                        <div class="themes_all">
-                            <ul>
-                                <li>Numpy</li>
-                                <li>Pandas</li>
-                                <li>Matplotlib</li>
-                                <li>Seaborn</li>
-                                <li>Scikit-Learn</li>
-                                <li>Tensorflow</li>
-                                <li>Pytorch</li>
-                            </ul>
-                        </div>
-                    </div>
-        
-                    <div class="flex_temas">
-                        <h2 class="title_level">web</h2>
-                        <div class="themes_all">
-                            <ul>
-                                <li>Django</li>
-                                <li>Flask</li>
-                                <li>FastAPI</li>
-                                <li>Tornado</li>
-                            </ul>
-                        </div>
+                </div>
+
+                <div class="container">
+                    <p class="text_import">Otros</p>
+                    <div class="show_links">
+                        <a href="https://devdocs.io/git/" target="_blank">Git</a>
+                        <a href="https://www.curso-ingles.com/" target="_blank">Inglés</a>
                     </div>
                 </div>
             </div>
-        </section>
     </main>
 
     <script src="js/code.js"></script>

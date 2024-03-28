@@ -103,27 +103,27 @@ function ShowDayCurrent() {
 
     if (days[date.getDay()] == 'Lunes') {
         lunes.forEach(lunes => {
-            lunes.style.backgroundColor = '#8b8b8b';
+            lunes.style.backgroundColor = '#166da0';
         });
     } else if (days[date.getDay()] == 'Martes') {
         martes.forEach(martes => {
-            martes.style.backgroundColor = '#8b8b8b';
+            martes.style.backgroundColor = '#166da0';
         });
     } else if (days[date.getDay()] == 'Miércoles') {
         miercoles.forEach(miercoles => {
-            miercoles.style.backgroundColor = '#8b8b8b';
+            miercoles.style.backgroundColor = '#166da0';
         });
     } else if (days[date.getDay()] == 'Jueves') {
         jueves.forEach(jueves => {
-            jueves.style.backgroundColor = '#8b8b8b';
+            jueves.style.backgroundColor = '#166da0';
         });
     } else if (days[date.getDay()] == 'Viernes') {
         viernes.forEach(viernes => {
-            viernes.style.backgroundColor = '#8b8b8b';
+            viernes.style.backgroundColor = '#166da0';
         });
     } else if (days[date.getDay()] == 'Sábado') {
         sabado.forEach(sabado => {
-            sabado.style.backgroundColor = '#8b8b8b';
+            sabado.style.backgroundColor = '#166da0';
         });
     } else if (days[date.getDay()] == 'Domingo') {
         const main = document.querySelector('.main')

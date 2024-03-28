@@ -2,18 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&family=Sigmar&display=swap');
 
 :root {
-    --color-nav: #171f26;
+    --color-black-text: #0c0c0c;
     --color-blue-claro: #14a1f0;
     --color-blue: #087ec4;
     --color-white: #f1f2e6;
-    --color-black: #201e1e;
+    --color-black: #393b46;
     --color-green: #35b34a;
-    --color-gris: #b4b4b4;
+    --color-gris: #a7a7a7;
+    --color-gris-card: #d3d3d3ef;
     --color-red: #b93737;
     --color-red-claro: #d67777;
     --color-yellow: #e6b224;
-    --color-purple: #513f74;
+    --color-purple: #653db4;
     --color-purple-claro: #9583b8;
+    --color-orange: #f07d30;
 
 
     --font-montserrat: 'Montserrat', sans-serif;
