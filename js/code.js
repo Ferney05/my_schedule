@@ -27,12 +27,7 @@ const _3jueves = document.querySelector('.current_activity3jueves')
 const _3viernes = document.querySelector('.current_activity3viernes')
 const _3sabado = document.querySelector('.current_activity3sabado')
 
-const laborar_lunes = document.querySelector('.laborar')
-const laborar_martes = document.querySelector('.laborar')
-const laborar_miercoles = document.querySelector('.laborar')
-const laborar_jueves = document.querySelector('.laborar')
-const laborar_viernes = document.querySelector('.laborar')
-const laborar_sabado = document.querySelector('.laborar')
+const laborar = document.querySelector('.laborar')
 
 const _5lunes = document.querySelector('.current_activity5lunes')
 const _5martes = document.querySelector('.current_activity5martes')
@@ -79,18 +74,18 @@ function CallFunctions(){
     const day_current = new Date()
 
     if (days[day_current.getDay()] === 'Lunes'){
-        MarkTable(_1lunes, _2lunes, _3lunes, laborar_lunes, _5lunes)
+        MarkTable(_1lunes, _2lunes, _3lunes, laborar, _5lunes)
     } else if (days[day_current.getDay()] === 'Martes'){
-        MarkTable(_1martes, _2martes, _3martes, laborar_martes, _5martes)
+        MarkTable(_1martes, _2martes, _3martes, laborar, _5martes)
     } else if (days[day_current.getDay()] === 'Miercoles'){
-        MarkTable(_1miercoles, _2miercoles, _3miercoles, laborar_miercoles, _5miercoles)
+        MarkTable(_1miercoles, _2miercoles, _3miercoles, laborar, _5miercoles)
     } else if (days[day_current.getDay()] === 'Jueves'){
-        MarkTable(_1jueves, _2jueves, _3jueves, laborar_jueves, _5jueves)
+        MarkTable(_1jueves, _2jueves, _3jueves, laborar, _5jueves)
     } else if (days[day_current.getDay()] === 'Viernes'){
-        MarkTable(_1viernes, _2viernes, _3viernes, laborar_viernes, _5viernes)
+        MarkTable(_1viernes, _2viernes, _3viernes, laborar, _5viernes)
     } else if (days[day_current.getDay()] === 'Sabado'){
-        MarkTable(_1sabado, _2sabado, _3sabado, laborar_sabado, _5sabado)
-        laborar_sabado.style = 'background-color: #b4b4b4;'
+        MarkTable(_1sabado, _2sabado, _3sabado, laborar, _5sabado)
+        laborar.style = 'background-color: none'
     }
 }
 
@@ -149,31 +144,6 @@ function ShowDayCurrent() {
 
 ShowDayCurrent()
 CallFunctions()
-
-
-// Mostrar temas
-
-// PYTHON
-
-const sh_temas_py = document.querySelector('.sh_temas_py')
-const close_py = document.querySelector('.close_py')
-
-function ShowHiddenTemasPython(show){
-    show.addEventListener('click', () => {
-        sh_temas_py.style = 'display: block'
-    })
-
-    close_py.addEventListener('click', () => {
-        sh_temas_py.style = 'display: none'
-    })
-}
-
-ShowHiddenTemasPython(_1lunes)
-ShowHiddenTemasPython(_1viernes)
-ShowHiddenTemasPython(_2martes)
-ShowHiddenTemasPython(_2jueves)
-ShowHiddenTemasPython(_5miercoles)
-ShowHiddenTemasPython(_5sabado)
 
 
 
