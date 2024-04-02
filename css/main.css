@@ -112,3 +112,15 @@ td {
     background-color: var(--color-blue);
     color: var(--color-white);
 } 
+
+.day_current_rule_apply {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rule {
+    font-size: .8rem;
+    color: var(--color-green);
+    font-weight: 400;
+}

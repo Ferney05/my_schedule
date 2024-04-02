@@ -44,11 +44,15 @@ function MarkTable(one, two, three, four, five) {
     const currentHour = hour.getHours();
     const currentMinute = hour.getMinutes();
 
-    if (currentHour === 6 && currentMinute >= 0 && currentMinute <= 59) {
+    if (currentHour === 5 && currentMinute >= 30 && currentMinute <= 59) {
         one.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 7 && currentMinute >= 0 && currentMinute <= 59) {
+    } else if (currentHour === 6 && currentMinute >= 0 && currentMinute <= 59) {
+        one.style.backgroundColor = '#35b34a';
+    }  else if (currentHour === 7 && currentMinute >= 0 && currentMinute <= 59) {
         two.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute >= 30) {
+    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute <= 30) {
+        two.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 8 && currentMinute >= 30 && currentMinute >= 59) {
         four.style.backgroundColor = '#35b34a';
     } else if (currentHour === 9 && currentMinute >= 0 && currentMinute <= 59) {
         four.style.backgroundColor = '#35b34a';
@@ -64,7 +68,11 @@ function MarkTable(one, two, three, four, five) {
         four.style.backgroundColor = '#35b34a';
     } else if (currentHour === 19 && currentMinute >= 0 && currentMinute <= 59) {
         three.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 59) {
+    } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 30) {
+        three.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 20 && currentMinute >= 30 && currentMinute <= 59) {
+        five.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 21 && currentMinute >= 0 && currentMinute <= 59) {
         five.style.backgroundColor = '#35b34a';
     }
 }
@@ -141,10 +149,25 @@ function ShowDayCurrent() {
     }
 }
 
+function rule_days(){
+    const rule = document.querySelector('.rule');
+    const date = new Date();
+
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+    
+    let i = 0
+    rule.innerText = `+${i}`; 
+
+    if(hour === 0 && minute === 0){
+        i++;
+    }
+}
+
 
 ShowDayCurrent()
 CallFunctions()
-
+rule_days()
 
 
 
