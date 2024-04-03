@@ -131,12 +131,33 @@ td {
         grid-row: 2  / 3;
 
         overflow-x: scroll;
-        height: 650px;
-        width: auto;
+        height: 450px;
     }
 
+    table {
+        width: 800px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .my_schedule::-webkit-scrollbar {
+        height: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--color-blue); 
+        border-radius: 6px; 
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: var(--color-black);
+    }
+  
+
     table tr td:first-child {
-        background-color: red;
+        width: 140px;
     }
     
     .card {
