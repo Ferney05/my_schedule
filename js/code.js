@@ -153,15 +153,27 @@ function rule_days(){
     const rule = document.querySelector('.rule');
     const date = new Date();
 
-    const hour = date.getHours();
-    const minute = date.getMinutes();
+    const day = date.getDay();
     
     let i = 0
-    rule.innerText = `+${i}`; 
 
-    if(hour === 0 && minute === 0){
+    if(day === 1){
+        i++;
+    } else if(day === 2){
+        i++;
+    } else if(day === 3){
+        i++;
+    } else if(day === 4){
+        i++;
+    } else if(day === 5){
+        i++;
+    } else if(day === 6){
+        i++;
+    } else if(day === 7){
         i++;
     }
+
+    rule.innerText = `+${i}`; 
 }
 
 
