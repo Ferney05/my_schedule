@@ -7,6 +7,7 @@
     grid-template-columns: 400px auto;
     grid-template-rows: 1fr;
     justify-content: space-around;
+    z-index: 0;
 }
 
 .my_schedule {
@@ -27,22 +28,25 @@
 }
 
 .nav {
+    top: 0;
+    position: sticky;
+
     padding: 1rem 4.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     box-sizing: border-box;
 }
 
 .logo {
     color: var(--color-blue-claro);
     font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .logo span {
     color: var(--color-blue);
+    font-weight: 800;
+    letter-spacing: 2px;
 }
-
 
 .container {
     display: flex;
@@ -131,10 +135,15 @@ td {
     color: var(--color-white);
 } 
 
+.day_rule {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .rule {
     font-size: .8rem;
     color: var(--color-green);
-    font-weight: 400;
 }
 
 @media (max-width: 500px){
@@ -142,13 +151,16 @@ td {
         grid-column: 1 / 2;
         grid-row: 2  / 3;
 
-        overflow-x: scroll;
         height: 450px;
+        padding: 0 2rem;
+    }
+
+    .table_my_schedule {
+        overflow-x: scroll;
     }
 
     table {
         width: 800px;
-        margin: 0 1rem 0 .5rem;
     }
 
     ::-webkit-scrollbar {
@@ -172,15 +184,8 @@ td {
         width: 140px;
     }
     
-    .day_current_rule_apply {
-        width: 800px;
-        padding: 0 .5rem;
-        box-sizing: border-box;
-    }
-
     .nav {
         padding: 1rem 2rem;
-        box-sizing: border-box;
     }
     
     .logo {
