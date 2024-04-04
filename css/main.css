@@ -150,7 +150,7 @@ td {
 
     table {
         width: 800px;
-        margin: 0 1rem;
+        margin: 0 1rem 0 .5rem;
     }
 
     ::-webkit-scrollbar {
@@ -185,6 +185,6 @@ td {
     }
     
     .logo {
-        font-size: larger;
+        font-size: 1.8rem;
     }
 }
