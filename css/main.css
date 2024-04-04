@@ -7,7 +7,8 @@
     grid-template-columns: 400px auto;
     grid-template-rows: 1fr;
     justify-content: space-around;
-    z-index: 0;
+
+    margin-top: 1rem;
 }
 
 .my_schedule {
@@ -27,10 +28,16 @@
     gap: 1rem;
 }
 
-.nav {
+header {
     top: 0;
     position: sticky;
+}
 
+.scrolled {
+    background-color: var(--color-gris-card);
+}
+
+.nav {
     padding: 1rem 4.7rem;
     box-sizing: border-box;
 }
