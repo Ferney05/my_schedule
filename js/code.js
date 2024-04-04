@@ -149,14 +149,15 @@ function ShowDayCurrent() {
     }
 }
 
+
+let i = 0
+
 function rule_days(){
     const rule = document.querySelector('.rule');
     const date = new Date();
 
     const day = date.getDay();
     
-    let i = 0
-
     if(day === 1){
         i++;
     } else if(day === 2){
@@ -171,9 +172,15 @@ function rule_days(){
         i++;
     } else if(day === 7){
         i++;
+    } else if (i > 90) {
+        i = 0;
     }
 
-    rule.innerText = `+${i}`; 
+    if(i === 1){
+        rule.innerText = `+${i} día`; 
+    } else if (i >= 2){
+        rule.innerText = `+${i} días`; 
+    }
 }
 
 
