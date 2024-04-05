@@ -5,7 +5,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 400px auto;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-content: space-around;
 
     margin-top: 1rem;
@@ -13,13 +13,13 @@
 
 .my_schedule {
     grid-column: 2 / 3;
-    grid-row: 1  / 1;
+    grid-row: 1  / 2;
     justify-content: center;
 }
 
 .card {
     grid-column: 1 / 2;
-    grid-row: 1 / 1;
+    grid-row: 1 / 2;
     padding: 2rem;
     box-sizing: border-box;
 
