@@ -150,38 +150,27 @@ function ShowDayCurrent() {
 }
 
 
-let i = 0
+let i = 0;
+const rule = document.querySelector('.rule');
 
-function rule_days(){
-    const rule = document.querySelector('.rule');
+
+function rule_days() {
     const date = new Date();
-
     const day = date.getDay();
     
-    if(day === 1){
+    if (day >= 1 && day <= 7) {
         i++;
-    } else if(day === 2){
-        i++;
-    } else if(day === 3){
-        i++;
-    } else if(day === 4){
-        i++;
-    } else if(day === 5){
-        i++;
-    } else if(day === 6){
-        i++;
-    } else if(day === 7){
-        i++;
+    }
+
+    if (i === 1) {
+        rule.innerText = `+${i} día`; 
+    } else if (i >= 2) {
+        rule.innerText = `+${i} días`; 
     } else if (i > 90) {
         i = 0;
     }
-
-    if(i === 1){
-        rule.innerText = `+${i} día`; 
-    } else if (i >= 2){
-        rule.innerText = `+${i} días`; 
-    }
 }
+
 
 // window.addEventListener('scroll', function() {
 //     var nav = document.querySelector('.nav');
