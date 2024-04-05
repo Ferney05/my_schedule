@@ -28,15 +28,6 @@
     gap: 1rem;
 }
 
-header {
-    top: 0;
-    position: sticky;
-}
-
-.scrolled {
-    background-color: var(--color-gris-card);
-}
-
 .nav {
     padding: 1rem 4.7rem;
     box-sizing: border-box;
