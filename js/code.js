@@ -158,15 +158,28 @@ function rule_days() {
     const date = new Date();
     const day = date.getDay();
     
-    if (day >= 1 && day <= 7) {
+    if (day === 1) {
+        i++;
+    } else if (day === 2) {
+        i++;
+    } else if (day === 3) {
+        i++;
+    } else if (day === 3) {
+        i++;
+    } else if (day === 4) {
+        i++;
+    } else if (day === 5) {
+        i++;
+    } else if (day === 6) {
+        i++;
+    } else if (day === 7) {
         i++;
     }
 
-    if (i === 1) {
-        rule.innerText = `+${i} día`; 
-    } else if (i >= 2) {
-        rule.innerText = `+${i} días`; 
-    } else if (i > 90) {
+
+    rule.innerText = `90/+${i}/1`; 
+
+    if (i > 90) {
         i = 0;
     }
 }
