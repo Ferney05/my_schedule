@@ -150,39 +150,39 @@ function ShowDayCurrent() {
 }
 
 
-let i = 0;
-const rule = document.querySelector('.rule');
+// let i = 0;
+// const rule = document.querySelector('.rule');
 
 
-function rule_days() {
-    const date = new Date();
-    const day = date.getDay();
+// function rule_days() {
+//     const date = new Date();
+//     const day = date.getDay();
     
-    if (day === 1) {
-        i++;
-    } else if (day === 2) {
-        i++;
-    } else if (day === 3) {
-        i++;
-    } else if (day === 3) {
-        i++;
-    } else if (day === 4) {
-        i++;
-    } else if (day === 5) {
-        i++;
-    } else if (day === 6) {
-        i++;
-    } else if (day === 7) {
-        i++;
-    }
+//     if (day === 1) {
+//         i++;
+//     } else if (day === 2) {
+//         i++;
+//     } else if (day === 3) {
+//         i++;
+//     } else if (day === 3) {
+//         i++;
+//     } else if (day === 4) {
+//         i++;
+//     } else if (day === 5) {
+//         i++;
+//     } else if (day === 6) {
+//         i++;
+//     } else if (day === 7) {
+//         i++;
+//     }
 
 
-    rule.innerText = `90/+${i}/1`; 
+//     rule.innerText = `90/+${i}/1`; 
 
-    if (i > 90) {
-        i = 0;
-    }
-}
+//     if (i > 90) {
+//         i = 0;
+//     }
+// }
 
 
 // window.addEventListener('scroll', function() {
@@ -197,7 +197,7 @@ function rule_days() {
 
 ShowDayCurrent()
 CallFunctions()
-rule_days()
+// rule_days()
 
 
 
