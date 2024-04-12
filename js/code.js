@@ -44,15 +44,11 @@ function MarkTable(one, two, three, four, five) {
     const currentHour = hour.getHours();
     const currentMinute = hour.getMinutes();
 
-    if (currentHour === 5 && currentMinute >= 30 && currentMinute <= 59) {
-        one.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 6 && currentMinute >= 0 && currentMinute <= 59) {
+    if (currentHour === 6 && currentMinute >= 0 && currentMinute <= 59) {
         one.style.backgroundColor = '#35b34a';
     }  else if (currentHour === 7 && currentMinute >= 0 && currentMinute <= 59) {
         two.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute <= 30) {
-        two.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 8 && currentMinute >= 30 && currentMinute >= 59) {
+    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute >= 59) {
         four.style.backgroundColor = '#35b34a';
     } else if (currentHour === 9 && currentMinute >= 0 && currentMinute <= 59) {
         four.style.backgroundColor = '#35b34a';
@@ -65,6 +61,10 @@ function MarkTable(one, two, three, four, five) {
     } else if (currentHour === 13 && currentMinute >= 0 && currentMinute <= 59) {
         four.style.backgroundColor = '#35b34a';
     } else if (currentHour === 14 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 15 && currentMinute >= 0 && currentMinute <= 59) {
+        four.style.backgroundColor = '#35b34a';
+    } else if (currentHour === 16 && currentMinute >= 0 && currentMinute <= 59) {
         four.style.backgroundColor = '#35b34a';
     } else if (currentHour === 19 && currentMinute >= 0 && currentMinute <= 59) {
         three.style.backgroundColor = '#35b34a';
@@ -150,54 +150,9 @@ function ShowDayCurrent() {
 }
 
 
-// let i = 0;
-// const rule = document.querySelector('.rule');
-
-
-// function rule_days() {
-//     const date = new Date();
-//     const day = date.getDay();
-    
-//     if (day === 1) {
-//         i++;
-//     } else if (day === 2) {
-//         i++;
-//     } else if (day === 3) {
-//         i++;
-//     } else if (day === 3) {
-//         i++;
-//     } else if (day === 4) {
-//         i++;
-//     } else if (day === 5) {
-//         i++;
-//     } else if (day === 6) {
-//         i++;
-//     } else if (day === 7) {
-//         i++;
-//     }
-
-
-//     rule.innerText = `90/+${i}/1`; 
-
-//     if (i > 90) {
-//         i = 0;
-//     }
-// }
-
-
-// window.addEventListener('scroll', function() {
-//     var nav = document.querySelector('.nav');
-//     if (window.scrollY > 0) {
-//         nav.classList.add('scrolled');
-//     } else {
-//         nav.classList.remove('scrolled');
-//     }
-// });
-
 
 ShowDayCurrent()
 CallFunctions()
-// rule_days()
 
 
 
