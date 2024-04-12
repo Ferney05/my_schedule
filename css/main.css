@@ -141,7 +141,9 @@ td {
 
 .rule {
     font-size: .8rem;
-    color: var(--color-green);
+    color: var(--color-blue);
+    border-radius: 10px;
+    font-weight: 400;
 }
 
 @media (max-width: 500px){
