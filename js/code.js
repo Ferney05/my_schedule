@@ -6,35 +6,35 @@ const jueves = document.querySelectorAll('.jueves')
 const viernes = document.querySelectorAll('.viernes')
 const sabado = document.querySelectorAll('.sabado')
 
-const _1lunes = document.querySelector('.current_activity1lunes')
-const _1martes = document.querySelector('.current_activity1martes')
-const _1miercoles = document.querySelector('.current_activity1miercoles')
-const _1jueves = document.querySelector('.current_activity1jueves')
-const _1viernes = document.querySelector('.current_activity1viernes')
-const _1sabado = document.querySelector('.current_activity1sabado')
+const lunes1 = document.querySelector('.current_activity1lunes')
+const martes1 = document.querySelector('.current_activity1martes')
+const miercoles1 = document.querySelector('.current_activity1miercoles')
+const jueves1 = document.querySelector('.current_activity1jueves')
+const viernes1 = document.querySelector('.current_activity1viernes')
+const sabado1 = document.querySelector('.current_activity1sabado')
 
-const _2lunes = document.querySelector('.current_activity2lunes')
-const _2martes = document.querySelector('.current_activity2martes')
-const _2miercoles = document.querySelector('.current_activity2miercoles')
-const _2jueves = document.querySelector('.current_activity2jueves')
-const _2viernes = document.querySelector('.current_activity2viernes')
-const _2sabado = document.querySelector('.current_activity2sabado')
+const lunes2 = document.querySelector('.current_activity2lunes')
+const martes2 = document.querySelector('.current_activity2martes')
+const miercoles2 = document.querySelector('.current_activity2miercoles')
+const jueves2 = document.querySelector('.current_activity2jueves')
+const viernes2 = document.querySelector('.current_activity2viernes')
+const sabado2 = document.querySelector('.current_activity2sabado')
 
-const _3lunes = document.querySelector('.current_activity3lunes')
-const _3martes = document.querySelector('.current_activity3martes')
-const _3miercoles = document.querySelector('.current_activity3miercoles')
-const _3jueves = document.querySelector('.current_activity3jueves')
-const _3viernes = document.querySelector('.current_activity3viernes')
-const _3sabado = document.querySelector('.current_activity3sabado')
+const lunes3 = document.querySelector('.current_activity3lunes')
+const martes3 = document.querySelector('.current_activity3martes')
+const miercoles3 = document.querySelector('.current_activity3miercoles')
+const jueves3 = document.querySelector('.current_activity3jueves')
+const viernes3 = document.querySelector('.current_activity3viernes')
+const sabado3 = document.querySelector('.current_activity3sabado')
 
 const laborar = document.querySelector('.laborar')
 
-const _4lunes = document.querySelector('.current_activity5lunes')
-const _4martes = document.querySelector('.current_activity5martes')
-const _4miercoles = document.querySelector('.current_activity5miercoles')
-const _4jueves = document.querySelector('.current_activity5jueves')
-const _4viernes = document.querySelector('.current_activity5viernes')
-const _4sabado = document.querySelector('.current_activity5sabado')
+const lunes4 = document.querySelector('.current_activity5lunes')
+const martes4 = document.querySelector('.current_activity5martes')
+const miercoles4 = document.querySelector('.current_activity5miercoles')
+const jueves4 = document.querySelector('.current_activity5jueves')
+const viernes4 = document.querySelector('.current_activity5viernes')
+const sabado4 = document.querySelector('.current_activity5sabado')
 
 const date_current = document.getElementById('date_current')
 
@@ -48,7 +48,7 @@ function MarkTable(one, two, three, four, five) {
         one.style.backgroundColor = '#35b34a';
     }  else if (currentHour === 7 && currentMinute >= 0 && currentMinute <= 59) {
         two.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute >= 59) {
+    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute <= 59) {
         three.style.backgroundColor = '#35b34a';
     } else if (currentHour === 9 && currentMinute >= 0 && currentMinute <= 59) {
         three.style.backgroundColor = '#35b34a';
@@ -82,17 +82,17 @@ function CallFunctions(){
     const day_current = new Date()
 
     if (days[day_current.getDay()] === 'Lunes'){
-        MarkTable(_1lunes, _2lunes, laborar, _3lunes, _4lunes)
+        MarkTable(lunes1, lunes2, laborar, lunes3, lunes4)
     } else if (days[day_current.getDay()] === 'Martes'){
-        MarkTable(_1martes, _2martes, laborar, _3martes, _4martes)
+        MarkTable(martes1, martes2, laborar, martes3, martes4)
     } else if (days[day_current.getDay()] === 'Miercoles'){
-        MarkTable(_1miercoles, _2miercoles, laborar, _3miercoles, _4miercoles)
+        MarkTable(miercoles1, miercoles2, laborar, miercoles3, miercoles4)
     } else if (days[day_current.getDay()] === 'Jueves'){
-        MarkTable(_1jueves, _2jueves, laborar, _3jueves, _4jueves)
+        MarkTable(jueves1, jueves2, laborar, jueves3, jueves4)
     } else if (days[day_current.getDay()] === 'Viernes'){
-        MarkTable(_1viernes, _2viernes, laborar, _3viernes, _4viernes)
+        MarkTable(viernes1, viernes2, laborar, viernes3, viernes4)
     } else if (days[day_current.getDay()] === 'Sabado'){
-        MarkTable(_1sabado, _2sabado, laborar, _3sabado, _4sabado)
+        MarkTable(sabado1, sabado2, laborar, sabado3, sabado4)
         laborar.style = 'background-color: none'
     }
 }
