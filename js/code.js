@@ -149,10 +149,33 @@ function ShowDayCurrent() {
     }
 }
 
-
-
 ShowDayCurrent()
 CallFunctions()
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const lis = document.querySelectorAll('.li')
+
+    lis.forEach(item => {
+        item.addEventListener('click', () => {
+            if (!item.isContentEditable) {
+                item.classList.add('li--focus')
+                item.contentEditable = true;
+                item.style = 'color: #35b34a'
+            }
+        });
+
+        item.addEventListener('blur', () => {
+            item.classList.remove('li--focus')
+            item.contentEditable = false;
+        });
+
+        item.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                item.contentEditable = false;
+                item.blur();
+            }
+        });
+    });
+});
 
