@@ -68,11 +68,7 @@ function MarkTable(one, two, three, four, five) {
         three.style.backgroundColor = '#35b34a';
     } else if (currentHour === 19 && currentMinute >= 0 && currentMinute <= 59) {
         four.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 30) {
-        four.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 20 && currentMinute >= 30 && currentMinute <= 59) {
-        five.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 21 && currentMinute >= 0 && currentMinute <= 59) {
+    } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 59) {
         five.style.backgroundColor = '#35b34a';
     }
 }
@@ -151,31 +147,3 @@ function ShowDayCurrent() {
 
 ShowDayCurrent()
 CallFunctions()
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const lis = document.querySelectorAll('.li')
-
-    lis.forEach(item => {
-        item.addEventListener('click', () => {
-            if (!item.isContentEditable) {
-                item.classList.add('li--focus')
-                item.contentEditable = true;
-                item.style = 'color: #35b34a'
-            }
-        });
-
-        item.addEventListener('blur', () => {
-            item.classList.remove('li--focus')
-            item.contentEditable = false;
-        });
-
-        item.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                item.contentEditable = false;
-                item.blur();
-            }
-        });
-    });
-});
-
