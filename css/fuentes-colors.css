@@ -8,8 +8,8 @@
     --color-white: #f1f2e6;
     --color-black: #393b46;
     --color-green: #35b34a;
-    --color-gris: #a7a7a7;
-    --color-gris-card: #ccccccef;
+    --color-gris: #cecece;
+    --color-gris-claro: #ebebebea;
     --color-red: #b93737;
     --color-red-claro: #d67777;
     --color-yellow: #e6b224;
@@ -26,3 +26,4 @@
     padding: 0;
     font-weight: 200;
 }
+

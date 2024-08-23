@@ -4,127 +4,382 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Schedule</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/newstyles.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 <body class="body">
+
     <main class="main">
-        <section class="my_schedule">
-            <div class="day_rule">
-                <p class="remember_today" id="date_current"></p>
+        <section class="options">
+            <div class="icon" id="courses">
+                <svg class="courses" id="svg-courses" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M32 192L256 64l224 128l-224 128z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M112 240v128l144 80l144-80V240m80 128V192M256 320v128"/></svg>  
             </div>
 
-            <div class="table_my_schedule">
-                <table>
-                    <tr>
-                        <th>Hora</th>
-                        <th class="lunes">Lunes</th>
-                        <th class="martes">Martes</th>
-                        <th class="miercoles">Miércoles</th>
-                        <th class="jueves">Jueves</th>
-                        <th class="viernes">Viernes</th>
-                        <th class="sabado">Sábado</th>
-                    </tr>
-                    <tr>
-                        <td>6:00 a.m - 7:00 a.m</td>
-                        <td class="lunes current_activity1lunes">Pandas</td>
-                        <td class="martes current_activity1martes">React js</td>
-                        <td class="miercoles current_activity1miercoles">Git</td>
-                        <td class="jueves current_activity1jueves">React js</td>
-                        <td class="viernes current_activity1viernes">Excel</td>
-                        <td class="sabado current_activity1sabado">Gym en casa</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>7:00 a.m - 8:00 a.m</td>
-                        <td class="lunes current_activity2lunes">Pandas</td>
-                        <td class="martes current_activity2martes">React js</td>
-                        <td class="miercoles current_activity2miercoles">Git</td>
-                        <td class="jueves current_activity2jueves">React js</td>
-                        <td class="viernes current_activity2viernes">Excel</td>
-                        <td class="sabado current_activity2sabado">Gym en casa</td>
-                    </tr>
-        
-                    <tr>
-                        <td>8:00 a.m - 5:00 p.m</td>
-                        <td colspan="5" class="laborar">Laborar</td>
-                    </tr>
-        
-                    <tr>
-                        <td colspan="7" class="rest">Descanso</td>
-                    </tr>
-
-                    <tr>
-                        <td>7:00 p.m - 8:00 p.m</td>
-                        <td class="lunes current_activity3lunes">Pandas</td>
-                        <td class="martes current_activity3martes">React js</td>
-                        <td class="miercoles current_activity3miercoles">Git</td>
-                        <td class="jueves current_activity3jueves">React js</td>
-                        <td class="viernes current_activity3viernes">Inglés</td>
-                        <td class="sabado current_activity3sabado"></td>
-                    </tr>
-        
-                    <tr>
-                        <td>8:00 p.m - 9:00 p.m</td>
-                        <td class="lunes current_activity5lunes">Gym en casa</td>
-                        <td class="martes current_activity5martes">Gym en casa</td>
-                        <td class="miercoles current_activity5miercoles">Gym en casa</td>
-                        <td class="jueves current_activity5jueves">Gym en casa</td>
-                        <td class="viernes current_activity5viernes">Gym en casa</td>
-                        <td class="sabado current_activity5sabado"></td>
-                    </tr>
-                </table>
+            <div class="icon" id="routes">
+                <svg class="routes" id="svg-routes" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M9 21q-1.65 0-2.825-1.175T5 17V8.825Q4.125 8.5 3.563 7.738T3 6q0-1.25.875-2.125T6 3t2.125.875T9 6q0 .975-.562 1.738T7 8.825V17q0 .825.588 1.413T9 19t1.413-.587T11 17V7q0-1.65 1.175-2.825T15 3t2.825 1.175T19 7v8.175q.875.325 1.438 1.088T21 18q0 1.25-.875 2.125T18 21t-2.125-.875T15 18q0-.975.563-1.75T17 15.175V7q0-.825-.587-1.412T15 5t-1.412.588T13 7v10q0 1.65-1.175 2.825T9 21M6 7q.425 0 .713-.288T7 6t-.288-.712T6 5t-.712.288T5 6t.288.713T6 7m12 12q.425 0 .713-.288T19 18t-.288-.712T18 17t-.712.288T17 18t.288.713T18 19m0-1"/></svg>
+            </div>
+            
+            <div class="icon" id="horary">
+                <svg class="horary" id="svg-horary" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M14.105 8.155c0-2.871-1.375-5.34-2.42-6.145c-.005-.003-.081-.046-.074.07l-.003.003c-.086 5.544-2.871 7.047-4.402 9.071c-3.533 4.671-.247 9.793 3.099 10.74c1.872.53-.433-.937-.73-4.035c-.359-3.745 4.53-6.604 4.53-9.704m1.825 1.753c-.02-.015-.051-.025-.072.01c-.058.707-.755 2.217-1.64 3.603c-3 4.702-1.29 6.969-.328 8.186c.557.707 0 0 1.394-.722c.11-.057 2.722-1.57 3.005-5.02c.274-3.34-1.667-5.445-2.358-6.057"/></svg>
             </div>
         </section>
 
-        <div class="card">
-            <div class="container">
-                <p class="text_import">Python</p>
-                <div class="show_links">
-                    <a href="https://www.udemy.com/course/draft/5196714/learn/lecture/37104242#overview" target="_blank">Academia Python</a>
+        <section class="see-options" id="see-options">
+            <div id="not-info">
+                <p class="textinfo">Ninguna información que mostrar.</p>
+            </div>
+
+            <div id="show-courses">
+                <div class="set-courses">
+
+                    <div class="sets">
+                        <p class="language">Python</p>
+                        <div class="links">
+                            <a href="https://www.udemy.com/course/draft/5196714/learn/lecture/37104242#overview" target="_blank" class="lc">Academia python</a>
+                        </div>
+                    </div>
+    
+                    <div class="sets">
+                        <p class="language">JavaScript</p>
+                        <div class="links">
+                            <a href="https://www.udemy.com/share/109MlO3@dHUdk6_ZUBGX-VUCYr-2Fz2waG-TGD38jUoIwK8XN2-SmrClHeyZMEtq5PpHY39jiw==/" class="lc" target="_blank">Node Js</a>
+                            <a href="https://www.udemy.com/share/101E7A3@rbaUsyJT1G104VsjkGbBg7bzG-977cqNAhId7ilCalrNTFffuMmaUUJsx4GbssXkXg==/" class="lc" target="_blank">JavaScript</a>
+                            <a href="https://www.udemy.com/share/103dum3@RHh4Avrrq4OC-S3PWkaWIQ9LhZ6hMfpg-liLopE-Lx2oznjIFKjn9VJrOFSn1BVHZQ==/" class="lc" target="_blank">React JS</a>
+                        </div>
+                    </div>
+    
+                    <div class="sets">
+                        <p class="language">Git</p>
+                        <div class="links">
+                            <a href="https://www.youtube.com/watch?v=3GymExBkKjE" class="lc" target="_blank">Curso de Git</a>
+                        </div>
+                    </div>
+    
+                    <div class="sets">
+                        <p class="language">Idiomas</p>
+                        <div class="links">
+                            <a href="https://www.curso-ingles.com/" class="lc" target="_blank">Inglés</a>
+                        </div>
+                    </div>
+    
+                    <div class="sets">
+                        <p class="language">Finanzas</p>
+                        <div class="links">
+                        </div>
+                    </div>
+    
+                    <div class="sets">
+                        <p class="language">Emprendimiento</p>
+                        <div class="links">
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="container">
-                <p class="text_import">SQL</p>
-                <div class="show_links">
-                    <a href="https://www.sololearn.com/es/learn/courses/sql-introduction" target="_blank">Introducción a SQL</a>
-                    <a href="https://www.sololearn.com/es/learn/courses/sql-intermediate" target="_blank">SQL intermedio</a>
+            <div id="show-routes">
+                <div class="set-routes">
+                    <div class="setsr">
+                        <p class="lgr">Python</p>
+                        <div class="frame-bltca">
+                            <div class="fb">
+                                <p class="title-fb">Frameworks</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">Django</li>
+                                        <li class="name-fb">Flask</li>
+                                        <li class="name-fb">FastAPI</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="fb">
+                                <p class="title-fb">Bibliotecas</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">NumPy</li>
+                                        <li class="name-fb">Pandas</li>
+                                        <li class="name-fb">TensorFlow</li>
+                                        <li class="name-fb">PyTorch</li>
+                                        <li class="name-fb">SciPy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setsr">
+                        <p class="lgr">JavaScript</p>
+                        <div class="frame-bltca">
+                            <div class="fb">
+                                <p class="title-fb">Frameworks</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">React.js</li>
+                                        <li class="name-fb">Angular</li>
+                                        <li class="name-fb">Vue.js</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bibliotecas">
+                                <p class="title-fb">Bibliotecas</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">Node.js</li>
+                                        <li class="name-fb">Express.js</li>
+                                        <li class="name-fb">D3.js</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setsr">
+                        <p class="lgr">Go</p>
+                        <div class="frame-bltca">
+                            <div class="fb">
+                                <p class="title-fb">Frameworks</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">Gin</li>
+                                        <li class="name-fb">Echo</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bibliotecas">
+                                <p class="title-fb">Bibliotecas</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">Go-Kit</li>
+                                        <li class="name-fb">GORM</li>
+                                        <li class="name-fb">Logrus</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setsr">
+                        <p class="lgr">TypeScript</p>
+                        <div class="frame-bltca">
+                            <div class="fb">
+                                <p class="title-fb">Frameworks</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">Next.js</li>
+                                        <li class="name-fb">NestJS</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bibliotecas">
+                                <p class="title-fb">Bibliotecas</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">RxJS</li>
+                                        <li class="name-fb">TypeORM</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setsr">
+                        <p class="lgr">Rust</p>
+                        <div class="frame-bltca">
+                            <div class="fb">
+                                <p class="title-fb">Frameworks</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">Actix</li>
+                                        <li class="name-fb">Rocket</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bibliotecas">
+                                <p class="title-fb">Bibliotecas</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">Tokio</li>
+                                        <li class="name-fb">Serde</li>
+                                        <li class="name-fb">Diesel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setsr">
+                        <p class="lgr">C#</p>
+                        <div class="frame-bltca">
+                            <div class="fb">
+                                <p class="title-fb">Frameworks</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">.NET Core</li>
+                                        <li class="name-fb">ASP.NET Core</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bibliotecas">
+                                <p class="title-fb">Bibliotecas</p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb">Xamarin</li>
+                                        <li class="name-fb">NUnit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="setsr">
+                        <p class="lgr"></p>
+                        <div class="frame-bltca">
+                            <div class="fb">
+                                <p class="title-fb"></p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb"></li>
+                                        <li class="name-fb"></li>
+                                        <li class="name-fb"></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bibliotecas">
+                                <p class="title-fb"></p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb"></li>
+                                        <li class="name-fb"></li>
+                                        <li class="name-fb"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="setsr">
+                        <p class="lgr"></p>
+                        <div class="frame-bltca">
+                            <div class="fb">
+                                <p class="title-fb"></p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb"></li>
+                                        <li class="name-fb"></li>
+                                        <li class="name-fb"></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bibliotecas">
+                                <p class="title-fb"></p>
+                                
+                                <div class="org-fb">
+                                    <ul>
+                                        <li class="name-fb"></li>
+                                        <li class="name-fb"></li>
+                                        <li class="name-fb"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
 
-            <div class="container">
-                <p class="text_import">JavaScript</p>
-                <div class="show_links">
-                    <a href="https://www.udemy.com/share/109MlO3@dHUdk6_ZUBGX-VUCYr-2Fz2waG-TGD38jUoIwK8XN2-SmrClHeyZMEtq5PpHY39jiw==/" target="_blank">Node Js</a>
-                    <a href="https://www.udemy.com/share/101E7A3@rbaUsyJT1G104VsjkGbBg7bzG-977cqNAhId7ilCalrNTFffuMmaUUJsx4GbssXkXg==/" target="_blank">JavaScript</a>
-                    <a href="https://www.udemy.com/share/103dum3@RHh4Avrrq4OC-S3PWkaWIQ9LhZ6hMfpg-liLopE-Lx2oznjIFKjn9VJrOFSn1BVHZQ==/" target="_blank">React JS</a>
+            <div id="show-horary">
+                <div class="my_schedule">
+                    <div class="day_rule">
+                        <p class="remember_today" id="date_current"></p>
+                    </div>
+        
+                    <div class="table_my_schedule">
+                        <table>
+                            <tr>
+                                <th>Hora</th>
+                                <th class="lunes">Lunes</th>
+                                <th class="martes">Martes</th>
+                                <th class="miercoles">Miércoles</th>
+                                <th class="jueves">Jueves</th>
+                                <th class="viernes">Viernes</th>
+                                <th class="sabado">Sábado</th>
+                            </tr>
+                            <tr>
+                                <td>6:00 a.m - 7:00 a.m</td>
+                                <td class="lunes current_activity1lunes">Home Gym</td>
+                                <td class="martes current_activity1martes">Home Gym</td>
+                                <td class="miercoles current_activity1miercoles">Home Gym</td>
+                                <td class="jueves current_activity1jueves">Home Gym</td>
+                                <td class="viernes current_activity1viernes">Home Gym</td>
+                                <td class="sabado current_activity1sabado">Home Gym</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>8:00 a.m - 9:00 a.m</td>
+                                <td class="lunes current_activity2lunes">Inglés</td>
+                                <td class="martes current_activity2martes">Inglés</td>
+                                <td class="miercoles current_activity2miercoles">Inglés</td>
+                                <td class="jueves current_activity2jueves">Inglés</td>
+                                <td class="viernes current_activity2viernes">Inglés</td>
+                                <td class="sabado current_activity2sabado"></td>
+                            </tr>
+                
+                            <!-- <tr> -->
+                                <!-- <td>8:00 a.m - 5:00 p.m</td> -->
+                                <!-- <td colspan="5" class="laborar">Laborar</td> -->
+                            <!-- </tr> -->
+                
+                            <tr>
+                                <td colspan="7" class="rest">Descanso</td>
+                            </tr>
+        
+                            <tr>
+                                <td>7:00 p.m - 8:00 p.m</td>
+                                <td class="lunes current_activity3lunes">Python</td>
+                                <td class="martes current_activity3martes">JavaScript</td>
+                                <td class="miercoles current_activity3miercoles">Python</td>
+                                <td class="jueves current_activity3jueves">JavaScript</td>
+                                <td class="viernes current_activity3viernes"></td>
+                                <td class="sabado current_activity3sabado"></td>
+                            </tr>
+                
+                            <tr>
+                                <td>8:00 p.m - 9:00 p.m</td>
+                                <td class="lunes current_activity5lunes">Python</td>
+                                <td class="martes current_activity5martes">JavaScript</td>
+                                <td class="miercoles current_activity5miercoles">Python</td>
+                                <td class="jueves current_activity5jueves">JavaScript</td>
+                                <td class="viernes current_activity5viernes"></td>
+                                <td class="sabado current_activity5sabado"></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
-
-            <div class="container">
-                <p class="text_import">Git</p>
-                <div class="show_links">
-                    <a href="https://www.youtube.com/watch?v=3GymExBkKjE" target="_blank">Git y Github</a>
-                </div>
-            </div>
-
-            <div class="container">
-                <p class="text_import">Excel</p>
-                <div class="show_links">
-                    <a href="https://www.udemy.com/share/106pjM3@_61IMrwSmTT4gAPapS237gQctWfsohBSosbiUVmJTAAyrQugrL94ECp0XdkHFh07uw==/" target="_blank">Tablas dinámicas y macros</a>
-                </div>
-            </div>
-
-            <div class="container">
-                <p class="text_import">Idiomas</p>
-                <div class="show_links">
-                    <a href="https://www.curso-ingles.com/" target="_blank">Inglés</a>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
 
-    <script src="js/code.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
