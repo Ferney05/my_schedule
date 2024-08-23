@@ -270,7 +270,15 @@ td {
     /* CURSOS */
     
     .set-courses {
-        width: 450px;
+        width: 300px;
+    }
+
+    .sets {
+        width: 260px;
+    }
+
+    .lc {
+        width: 120px;
     }
 
     /* RUTAS */
@@ -279,17 +287,18 @@ td {
         flex-direction: row;
         box-sizing: border-box;
         padding: 2rem 0;
-        width: 450px;
+        width: 350px;
     }
 
     /* HORARIO */
 
     .my_schedule {
-        width: 450px;
+        width: 340px;
         overflow-x: scroll;
     }
 
     table {
         width: 900px;
     }
+
 }
