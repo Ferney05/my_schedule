@@ -12,10 +12,12 @@ icon_courses.addEventListener('click', () => {
     not_info.style.display = 'none'
     show_routes.style.display = 'none'
     show_horary.style.display = 'none'
+    show_feeding.style.display = 'none'
     show_courses.style.display = 'block' // Se muestra
 
     icon_courses.classList.add('apply-courses', 'str-courses')
     icon_routes.classList.remove('apply-routes', 'strfill-routes')
+    icon_feeding.classList.remove('apply-feeding', 'strfill-feeding')
     icon_horary.classList.remove('apply-horary', 'strfill-horary')
 })
 
@@ -29,10 +31,12 @@ icon_routes.addEventListener('click', () => {
     not_info.style.display = 'none'
     show_courses.style.display = 'none'
     show_horary.style.display = 'none'
+    show_feeding.style.display = 'none'
     show_routes.style.display = 'block' // Se muestra
 
     icon_routes.classList.add('apply-routes', 'strfill-routes')
     icon_courses.classList.remove('apply-courses', 'str-courses')
+    icon_feeding.classList.remove('apply-feeding', 'strfill-feeding')
     icon_horary.classList.remove('apply-horary', 'strfill-horary')
 })
 
@@ -46,14 +50,34 @@ icon_horary.addEventListener('click', () => {
     not_info.style.display = 'none'
     show_courses.style.display = 'none'
     show_routes.style.display = 'none'
+    show_feeding.style.display = 'none'
     show_horary.style.display = 'block' // Se muestra
 
     icon_routes.classList.remove('apply-routes', 'strfill-routes')
     icon_courses.classList.remove('apply-courses', 'str-courses')
+    icon_feeding.classList.remove('apply-feeding', 'strfill-feeding')
     icon_horary.classList.add('apply-horary', 'strfill-horary')
 })
 
+// Alimentación
 
+const icon_feeding = document.getElementById('feeding')
+const svg_feeding = document.getElementById('svg-feeding')
+const show_feeding = document.getElementById('show-feeding')
+
+
+icon_feeding.addEventListener('click', () => {
+    not_info.style.display = 'none'
+    show_courses.style.display = 'none'
+    show_routes.style.display = 'none'
+    show_horary.style.display = 'none'
+    show_feeding.style.display = 'block' // Se muestra
+
+    icon_routes.classList.remove('apply-routes', 'strfill-routes')
+    icon_courses.classList.remove('apply-courses', 'str-courses')
+    icon_horary.classList.remove('apply-horary', 'strfill-horary')
+    icon_feeding.classList.add('apply-feeding', 'strfill-feeding')
+})
 
 
 
@@ -208,3 +232,41 @@ function ShowDayCurrent() {
 
 ShowDayCurrent()
 CallFunctions()
+
+// Validar código
+
+const code_input = document.getElementById('code')
+const btn = document.getElementById('btn-validar')
+const show_code = document.querySelector('.show-code')
+const info = document.querySelector('.info')
+
+let CODE_BLOCK = 'suntfer22'
+
+btn.addEventListener('click', () => {
+    const usercode = code_input.value.trim()
+
+    if(usercode === CODE_BLOCK){
+        show_code.style.display = 'none'
+    } else {
+        info.style = 'color: #b93737'
+        info.innerText = 'Oops, el código es inválido'
+    }
+})
+
+code_input.addEventListener('keyup', () => {
+
+    if(code_input.value.length == 0){
+        info.style = 'color: #b93737'
+        info.innerText = 'No has ingresado nada'
+    } 
+
+    if(code_input.value.length >= 1){
+        info.style = 'color: #0c0c0c'
+        info.innerText = 'Ingresando el código...'
+    } 
+    
+    if (code_input.value.length >= 5) {
+        info.style = 'color: #0c0c0c'
+        info.innerText = 'Estamos verificando el código...'  
+    }
+})

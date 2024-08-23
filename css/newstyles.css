@@ -32,7 +32,7 @@
     stroke: var(--color-purple);
 }
 
-.apply-courses, .apply-routes, .apply-horary {
+.apply-courses, .apply-routes, .apply-horary, .apply-feeding {
     background-color: var(--color-gris-claro);
     box-shadow: 1px 1px 5px 1px var(--color-gris-claro);
     border-radius: 15px;
@@ -54,6 +54,11 @@
     fill: var(--color-yellow);
 }
 
+.strfill-feeding #svg-feeding > path {
+    stroke: var(--color-green);
+    fill: var(--color-green);
+}
+
 .icon:hover .routes > path {
     stroke: var(--color-blue);
     fill: var(--color-blue);
@@ -62,6 +67,11 @@
 .icon:hover .horary > path {
     stroke: var(--color-yellow);
     fill: var(--color-yellow);
+}
+
+.icon:hover .feeding > path {
+    stroke: var(--color-green);
+    fill: var(--color-green);
 }
 
 .textinfo {
@@ -78,7 +88,7 @@
     justify-content: center;
 }
 
-#show-courses, #show-routes, #show-horary {
+#show-courses, #show-routes, #show-horary, #show-feeding {
     display: none;
 }
 
@@ -246,59 +256,351 @@ td {
 }
 
 
-/* MEDIA QUERY */
+/* Alimentación */
 
-@media (max-width: 500px){
-    .main {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60px 1fr;
+.show-code {
+    height: 100vh;
+    width: 92.66%;
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Aplica el desenfoque */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores WebKit */
+    padding: 20px; /* Opcional: agrega padding interno */
     }
 
-    .options {
-        grid-column: 1 / 3;
+    .i-code {
+        width: 500px;
+        padding: 1rem;
+    }
+
+    .info {
+        font-weight: 300;
+        font-size: .9rem;
+        color: var(--color-white);
+    }
+
+    .input-button {
+        margin-top: 1rem;
+        display: flex;
+        gap: .5rem;
+    }
+
+    .input-code {
+        padding: .5rem;
+        width: 240px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        font-size: .8rem;
+    }
+
+    #btn-validar {
+        outline: none;
+        padding: .5rem;
+        width: 190px;
+        border-radius: 10px;
+        background-color: initial;
+        border: 1px solid var(--color-green);
+        box-shadow: 0px 0px 5px 1px var(--color-green);
+        color: var(--color-white);
+        cursor: pointer;
+    }
+
+    #btn-validar:hover {
+        background-color: var(--color-green);
+    }
+
+    #show-feeding {
+        width: 100%;
+    }
+
+    .my-feeding {
+        height: 100vh;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: .1rem;
+    }
+
+    .feed1, .feed2, .feed3, .feed4, .feed5, .feed6, .feed7, .feed8 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .black {
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-black-transparente);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .name-feed {
+        font-size: .9rem;
+        font-weight: 300;
+        color: var(--color-white);
+    }
+
+
+    .feed1 {
+        grid-column: 1 / 2;
         grid-row: 1 / 2;
-        border-bottom: 1px groove var(--color-gris);
-        box-shadow: 1px 1px 2px 2px var(--color-gris-claro);
-        flex-direction: row;
-    }
-    
-    .see-options {
-        grid-column: 1 / 3;
-        grid-row: 2 / 3;  
-    }
-    
-    /* CURSOS */
-    
-    .set-courses {
-        width: 300px;
+        background-image: url('https://mandolina.co/wp-content/uploads/2023/09/pechuga-de-pollo-1080x550-1.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
-    .sets {
+
+    .feed2 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        background-image: url('https://images.ecestaticos.com/dv6CmyC8ui1EfYca6mOwWThwM3U=/1x121:2268x1396/1600x900/filters:fill(white):format(jpg):quality(99)/f.elconfidencial.com/original/08c/868/7aa/08c8687aa28ffd3c6c3a473598205af2.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed3 {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        background-image: url('https://erizorestaurante.com.mx/wp-content/uploads/2023/11/pescado-frito.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed4 {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+        background-image: url('https://www.recetasnestlecam.com/sites/default/files/styles/crop_article_banner_desktop_nes/public/2023-02/cuenco-con-yogurt-griego.jpg%20banner%20desktop.jpg?itok=jXAQUTrv');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed5 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        background-image: url('https://granvita.com/wp-content/uploads/2021/04/que-es-avena-portada.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed6 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqGqrO37WhJyAqcvgpgLdkU75m-DRXdGEKW2sMwuJKOkw6ASz65NNTjYhYn3OeEdFPXzw&usqp=CAU');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed7 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        background-image: url('https://www.paulinacocina.net/wp-content/uploads/2023/04/lentejas-con-verduras.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed8 {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+        background-image: url('https://imag.bonviveur.com/como-hacer-frijoles.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed9 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7kZ_vmuY37WTc6LMD1v-gk6LeVfKBxk55Pw&s');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed10 {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        background-image: url('https://www.comedera.com/wp-content/uploads/2022/04/Sardina-en-salsa-de-tomate-shutterstock_529239817.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed11 {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+        background-image: url('https://s1.elespanol.com/2020/04/03/ciencia/nutricion/leche-ganaderia-nutricion_479713685_149674077_1706x960.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .feed12 {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTEAZ8Ay6awzllIbqP6U7f3wdHZv-3-AbIZQ&s');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* MEDIA QUERY */
+
+    @media (max-width: 500px){
+        .main {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 60px 1fr;
+        }
+
+        .options {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            border-bottom: 1px groove var(--color-gris);
+            box-shadow: 1px 1px 2px 2px var(--color-gris-claro);
+            flex-direction: row;
+        }
+        
+        .see-options {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;  
+        }
+        
+        /* CURSOS */
+        
+        .set-courses {
+            width: 300px;
+        }
+
+        .sets {
+            width: 260px;
+        }
+
+        .lc {
+            width: 120px;
+        }
+
+        /* RUTAS */
+
+        .set-routes {
+            flex-direction: row;
+            box-sizing: border-box;
+            padding: 2rem 0;
+            width: 350px;
+        }
+
+        /* HORARIO */
+
+        .my_schedule {
+            width: 340px;
+            overflow-x: scroll;
+        }
+
+        table {
+            width: 900px;
+        }
+
+        /* Alimentación */
+
+    .show-code {
+        width: 320px;
+    }
+
+    .i-code {
+        width: 300px;
+        text-align: center;
+    }
+
+    .input-button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-code {
         width: 260px;
     }
 
-    .lc {
-        width: 120px;
+    #btn-validar {
+        width: 270px;
     }
 
-    /* RUTAS */
-
-    .set-routes {
-        flex-direction: row;
-        box-sizing: border-box;
-        padding: 2rem 0;
-        width: 350px;
+    .my-feeding {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 1fr);
     }
 
-    /* HORARIO */
-
-    .my_schedule {
-        width: 340px;
-        overflow-x: scroll;
+    .feed1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
     }
 
-    table {
-        width: 900px;
+    .feed2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .feed3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    } 
+
+    .feed4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .feed5 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    .feed6 {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+    }
+
+    .feed7 {
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+    }
+
+    .feed8 {
+        grid-column: 1 / 2;
+        grid-row: 8 / 9;
+    }
+
+    .feed9 {
+        grid-column: 1 / 2;
+        grid-row: 9 / 10;
+    }
+
+    .feed10 {
+        grid-column: 1 / 2;
+        grid-row: 10 / 11;
+    }
+
+    .feed11 {
+        grid-column: 1 / 2;
+        grid-row: 11 / 12;
+    }
+
+    .feed12 {
+        grid-column: 1 / 2;
+        grid-row: 12 / 13;
     }
 
 }
