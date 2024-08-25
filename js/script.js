@@ -209,25 +209,7 @@ function ShowDayCurrent() {
         sabado.forEach(sabado => {
             sabado.style.backgroundColor = '#166da0';
         });
-    } else if (days[date.getDay()] == 'Domingo') {
-        const main = document.querySelector('.main')
-        const body = document.querySelector('.body')
-
-        main.style = 'display: none'
-        body.classList.add('flex')
-
-        let date_text = document.createElement('p')
-        let title_info = document.createElement('h2')
-
-        body.appendChild(date_text)
-        body.appendChild(title_info)
- 
-        date_text.classList.add('date_text')
-        title_info.classList.add('title_info')
-
-        date_text.innerText = `Hoy es ${days[date.getDay()]}, ${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`;
-        title_info.innerText = 'Descanso.'
-    }
+    } // else if (days[date.getDay()] == 'Domingo') {}
 }
 
 ShowDayCurrent()
