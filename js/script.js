@@ -124,7 +124,7 @@ const sabado4 = document.querySelector('.current_activity5sabado')
 const date_current = document.getElementById('date_current')
 
 
-function MarkTable(one, two, three, four, five) {
+function MarkTable(one, two, three, four) {
     const hour = new Date();
     const currentHour = hour.getHours();
     const currentMinute = hour.getMinutes();
@@ -133,28 +133,10 @@ function MarkTable(one, two, three, four, five) {
         one.style.backgroundColor = '#35b34a';
     }  else if (currentHour === 7 && currentMinute >= 0 && currentMinute <= 59) {
         two.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 8 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 9 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 10 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 11 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 12 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 13 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 14 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 15 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
-    } else if (currentHour === 16 && currentMinute >= 0 && currentMinute <= 59) {
-        three.style.backgroundColor = '#35b34a';
     } else if (currentHour === 19 && currentMinute >= 0 && currentMinute <= 59) {
-        four.style.backgroundColor = '#35b34a';
+        three.style.backgroundColor = '#35b34a';
     } else if (currentHour === 20 && currentMinute >= 0 && currentMinute <= 59) {
-        five.style.backgroundColor = '#35b34a';
+        four.style.backgroundColor = '#35b34a';
     }
 }
 
@@ -163,18 +145,15 @@ function CallFunctions(){
     const day_current = new Date()
 
     if (days[day_current.getDay()] === 'Lunes'){
-        MarkTable(lunes1, lunes2, laborar, lunes3, lunes4)
+        MarkTable(lunes1, lunes2, lunes3, lunes4)
     } else if (days[day_current.getDay()] === 'Martes'){
-        MarkTable(martes1, martes2, laborar, martes3, martes4)
+        MarkTable(martes1, martes2, martes3, martes4)
     } else if (days[day_current.getDay()] === 'Miercoles'){
-        MarkTable(miercoles1, miercoles2, laborar, miercoles3, miercoles4)
+        MarkTable(miercoles1, miercoles2, miercoles3, miercoles4)
     } else if (days[day_current.getDay()] === 'Jueves'){
-        MarkTable(jueves1, jueves2, laborar, jueves3, jueves4)
+        MarkTable(jueves1, jueves2, jueves3, jueves4)
     } else if (days[day_current.getDay()] === 'Viernes'){
-        MarkTable(viernes1, viernes2, laborar, viernes3, viernes4)
-    } else if (days[day_current.getDay()] === 'Sabado'){
-        MarkTable(sabado1, sabado2, laborar, sabado3, sabado4)
-        laborar.style = 'background-color: none'
+        MarkTable(viernes1, viernes2, viernes3, viernes4)
     }
 }
 
@@ -217,38 +196,35 @@ CallFunctions()
 
 // Validar código
 
-const code_input = document.getElementById('code')
-const btn = document.getElementById('btn-validar')
-const show_code = document.querySelector('.show-code')
-const info = document.querySelector('.info')
+const code_input = document.getElementById('code');
+const btn = document.getElementById('btn-validar');
+const show_code = document.querySelector('.show-code');
+const info = document.querySelector('.info');
 
-let CODE_BLOCK = 'suntfer22'
+let CODE_BLOCK = 'suntfer22';
 
 btn.addEventListener('click', () => {
-    const usercode = code_input.value.trim()
+    const usercode = code_input.value.trim();
 
-    if(usercode === CODE_BLOCK){
-        show_code.style.display = 'none'
+    if (usercode === CODE_BLOCK) {
+        show_code.style.display = 'none';
     } else {
-        info.style = 'color: #b93737'
-        info.innerText = 'Oops, el código es inválido'
+        info.style.color = '#b93737';
+        info.innerText = 'Oops, el código es inválido';
     }
-})
+});
 
 code_input.addEventListener('keyup', () => {
+    const length = code_input.value.length;
 
-    if(code_input.value.length == 0){
-        info.style = 'color: #b93737'
-        info.innerText = 'No has ingresado nada'
-    } 
-
-    if(code_input.value.length >= 1){
-        info.style = 'color: #0c0c0c'
-        info.innerText = 'Ingresando el código...'
-    } 
-    
-    if (code_input.value.length >= 5) {
-        info.style = 'color: #0c0c0c'
-        info.innerText = 'Estamos verificando el código...'  
+    if (length === 0) {
+        info.style.color = '#b93737';
+        info.innerText = 'No has ingresado nada';
+    } else if (length < 8) {
+        info.style.color = '#0c0c0c';
+        info.innerText = 'Ingresando el código...';
+    } else {
+        info.style.color = '#0c0c0c';
+        info.innerText = 'Estamos verificando el código...';
     }
-})
+});

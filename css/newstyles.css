@@ -74,11 +74,6 @@
     fill: var(--color-green);
 }
 
-.textinfo {
-    font-size: .9rem;
-    font-weight: 300;
-}
-
 .see-options {
     grid-column: 2 / 3;
     grid-row: 1 / 2;  
@@ -90,6 +85,42 @@
 
 #show-courses, #show-routes, #show-horary, #show-feeding {
     display: none;
+}
+
+.red-social-p {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.social {
+    display: flex;
+    gap: .5rem;
+}
+
+.social a svg > path {
+    fill: var(--color-black-text);
+}
+
+.follow {
+    font-size: .9rem;
+    text-align: center;
+}
+
+.stf {
+    text-decoration: none;
+    border: 2.9px solid var(--color-black-text);
+    border-radius: 100%;
+    padding: 0 .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fb {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-black-text);
 }
 
 /* CURSOS */
