@@ -50,8 +50,8 @@
 }
 
 .strfill-horary #svg-horary > path {
-    stroke: var(--color-yellow);
-    fill: var(--color-yellow);
+    stroke: var(--color-blue-claro);
+    fill: var(--color-blue-claro);
 }
 
 .strfill-feeding #svg-feeding > path {
@@ -65,8 +65,8 @@
 }
 
 .icon:hover .horary > path {
-    stroke: var(--color-yellow);
-    fill: var(--color-yellow);
+    stroke: var(--color-blue-claro);
+    fill: var(--color-blue-claro);
 }
 
 .icon:hover .feeding > path {
@@ -129,7 +129,12 @@
 }
 
 .icon_ruta {
-    color: var(--color-yellow);
+    color: var(--color-blue-claro);
+    text-align: center;
+}
+
+.icon_diplomado {
+    color: var(--color-marron-claro);
     text-align: center;
 }
 
@@ -141,7 +146,8 @@
 }
 
 .lcr {
-    border: 1px solid var(--color-yellow);
+    margin-top: 1rem;
+    border: 1px solid var(--color-blue-claro);
     width: 170px;
     border-radius: 10px;
     padding: .4rem 0;
@@ -154,8 +160,28 @@
 }
 
 .lcr:hover {
-    box-shadow: 0px 0px 5px 1px var(--color-yellow);
-    color: var(--color-yellow);
+    box-shadow: 0px 0px 5px 1px var(--color-blue-claro);
+    color: var(--color-blue-claro);
+    transition: 1s ease;
+}
+
+.lcd {
+    margin-top: 1rem;
+    border: 1px solid var(--color-marron);
+    width: 170px;
+    border-radius: 10px;
+    padding: .4rem 0;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-black-text);
+    font-size: .8rem;
+    font-weight: 300;
+    transition: 1s ease;
+}
+
+.lcd:hover {
+    box-shadow: 0px 0px 5px 1px var(--color-marron-claro);
+    color: var(--color-marron-claro);
     transition: 1s ease;
 }
 
@@ -177,6 +203,7 @@
 
 .links {
     display: flex;
+    flex-wrap: wrap;
     gap: .3rem;
 }
 
@@ -195,7 +222,7 @@
 
 .lc:hover {
     box-shadow: 0px 0px 5px 1px var(--color-purple);
-    color: var(--color-purple);
+    color: #7457af;
     transition: 1s ease;
 }
 
@@ -533,12 +560,39 @@ td {
             width: 300px;
         }
 
+        .rutas {
+            width: 100%;
+        }
+
+        .group_ritems {
+            width: 100%;
+            align-items: center;
+        }
+        
+        .lcr, .lcd {
+            width: 250px;
+        }
+
+        .name_ruta_icon {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .icon_ruta {
+            color: var(--color-blue-claro);
+            text-align: center;
+        }
+
+        .courses_ruta {
+            padding-right: 0;
+        }
+
         .sets {
             width: 260px;
         }
 
         .lc {
-            width: 120px;
+            width: 250px;
         }
 
         /* RUTAS */

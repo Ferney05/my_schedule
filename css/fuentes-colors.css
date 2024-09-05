@@ -13,10 +13,12 @@
     --color-gris-claro: #ebebebea;
     --color-red: #b93737;
     --color-red-claro: #d67777;
-    --color-yellow: #e6b224;
-    --color-purple: #653db4;
+    --color-blue-claro: #00bfd5;
+    --color-purple: #653db498;
     --color-purple-claro: #9583b8;
     --color-orange: #f07d30;
+    --color-marron: #ac905d;
+    --color-marron-claro: #ac905dce;
 
     --font-montserrat: 'Montserrat', sans-serif;
 }
